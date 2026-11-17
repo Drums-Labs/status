@@ -30,7 +30,7 @@ to 7 days. The page (`index.html`) and `status.json` are rebuilt from it on ever
 ```bash
 node src/status.mjs probe  --history data/history.jsonl   # probe, append, prune to 7 days
 node src/status.mjs render --history data/history.jsonl --out site
-node --test test/
+node --test test/*.test.mjs
 ```
 
 ## Turning it on (owner, once)

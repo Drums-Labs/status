@@ -20,6 +20,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: node --test test/
+      - run: node --test test/*.test.mjs
       - name: Render an empty page (no history yet)
         run: node src/status.mjs render --history /nonexistent.jsonl --out "$RUNNER_TEMP/site" && test -s "$RUNNER_TEMP/site/index.html"
